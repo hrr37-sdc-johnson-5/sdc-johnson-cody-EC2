@@ -8,14 +8,12 @@ const PORT = process.env.PORT || 3003;
 
 app.use(cors());
 app.use('/', express.static(__dirname + '/../client/dist'));
-app.use('/:id', express.static(__dirname + '/../client/dist'));
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 
 app.get('/loaderio-015c2da76f01c0046740c7f89a27396f', (req, res) => {
-  const filePath = path.join(__dirname, './loaderio-015c2da76f01c0046740c7f89a27396f.html')
+  const filePath = path.join(__dirname, './loaderio-015c2da76f01c0046740c7f89a27396f.txt')
   res.sendFile(filePath);
 });
 
