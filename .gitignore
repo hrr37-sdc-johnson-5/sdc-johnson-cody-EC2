@@ -4,3 +4,4 @@ coverage
 .aws.json
 newrelic.js
 newrelic_agent.log
+database/config.js
