@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 const loader = '../loaderio-015c2da76f01c0046740c7f89a27396f.txt';
-app.get('/loaderio-015c2da76f01c0046740c7f89a27396f.txt', (req, res) => res.send(loader));
+app.get('/loaderio-015c2da76f01c0046740c7f89a27396f.txt', (req, res) => res.send('loaderio-015c2da76f01c0046740c7f89a27396f'));
 
 //===========Routes====================//
 
