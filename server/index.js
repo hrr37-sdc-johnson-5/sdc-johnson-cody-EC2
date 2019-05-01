@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const PORT = process.env.PORT || 3003;
 
+const loader = '../loaderio-015c2da76f01c0046740c7f89a27396f.txt';
 
 app.use(cors());
 app.use('/', express.static(__dirname + '/../client/dist'))
