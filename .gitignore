@@ -1,0 +1,6 @@
+node_modules
+client/dist/bundle.js
+coverage
+.aws.json
+newrelic.js
+newrelic_agent.log

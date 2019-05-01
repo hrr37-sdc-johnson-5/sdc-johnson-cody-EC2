@@ -1,0 +1,11 @@
+config:
+  target: 'http://localhost:3003'
+  phases:
+    - duration: 120
+      arrivalRate: 30
+      rampTo: 120
+scenarios:
+  - name: "Delete comment"
+    flow:
+      - delete:
+          url: "/support/comments/9999999/"

@@ -1,0 +1,15 @@
+config:
+  target: 'http://localhost:3003'
+  phases:
+    - duration: 120
+      arrivalRate: 20
+      rampTo: 120
+scenarios:
+  - name: "Post comments"
+    flow:
+      - post:
+          url: "/support/200/"
+          json:
+            username: "Hectron5000"
+            comment: "This album is smooth, I love listening to this while I code."
+            profileImg: "https://s3-us-west-1.amazonaws.com/hrr37-sdc-johnson-cody/SDC+Images/guest-user.jpeg"

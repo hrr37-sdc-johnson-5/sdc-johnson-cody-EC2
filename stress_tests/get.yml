@@ -1,0 +1,28 @@
+config:
+  target: 'http://localhost:3003'
+  http:
+    pool: 20
+  phases:
+    - duration: 10
+      arrivalRate: 1
+      rampTo: 10
+      name: "1 to 10 request per second"
+    - duration: 30
+      arrivalRate: 10
+      rampTo: 100
+      name: "10 to 100 request per second"
+    - duration: 60
+      arrivalRate: 100
+      rampTo: 1000
+      name: "100 to 1000 request per second"
+  payload:
+    path: "../artillery.csv"
+    fields:
+      - "albumId"
+    skipHeader: true
+scenarios:
+  - name: "Get comments"
+    flow:
+      - get:
+          url: "/support/{{albumId}}/"
+
