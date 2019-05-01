@@ -14,8 +14,10 @@ class SupportSection extends React.Component {
   }
 
   componentDidMount() {
-    let endpoint = window.location.pathname.slice(1);
+    let endpoint = window.location.pathname.slice(8);
     let origin = window.location.origin;
+    console.log(origin);
+    console.log(endpoint);
     fetch(`${origin}/support/${endpoint}`)
     .then(response => {
       return response.json();

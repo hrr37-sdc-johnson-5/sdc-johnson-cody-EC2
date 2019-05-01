@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3003;
 
 app.use(cors());
 app.use('/', express.static(__dirname + '/../client/dist'));
+app.use('/albums/:id', express.static(__dirname + '/../client/dist'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
