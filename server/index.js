@@ -1,6 +1,7 @@
 require('newrelic');
 const express = require('express');
 const app = express();
+const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const PORT = process.env.PORT || 3003;
@@ -12,8 +13,12 @@ app.use('/:id', express.static(__dirname + '/../client/dist'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-const loader = '../loaderio-015c2da76f01c0046740c7f89a27396f.txt';
-app.get('/loaderio-015c2da76f01c0046740c7f89a27396f.txt', (req, res) => res.send('loaderio-015c2da76f01c0046740c7f89a27396f'));
+
+app.get('/loaderio-015c2da76f01c0046740c7f89a27396f', (req, res) => {
+  const filePath = path.join(__dirname, './loaderio-015c2da76f01c0046740c7f89a27396f.txt')
+  res.sendFile(filePath);
+});
+
 
 //===========Routes====================//
 
