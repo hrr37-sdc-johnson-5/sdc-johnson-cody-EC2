@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 app.get('/loaderio-015c2da76f01c0046740c7f89a27396f', (req, res) => {
-  const filePath = path.join(__dirname, './loaderio-015c2da76f01c0046740c7f89a27396f.txt')
+  const filePath = path.join(__dirname, './loaderio-015c2da76f01c0046740c7f89a27396f.html')
   res.sendFile(filePath);
 });
 
