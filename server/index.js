@@ -71,4 +71,4 @@ app.delete('/support/comments/:id', (req, res) => {
   });
 });
 
-app.listen(PORT, 'ec2-18-144-31-194.us-west-1.compute.amazonaws.com', () => console.log(`listening on port ${PORT}`));
+app.listen(PORT, () => console.log(`listening on port ${PORT}`));
