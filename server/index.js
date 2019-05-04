@@ -4,7 +4,7 @@ const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3004;
 
 app.use(cors());
 app.use('/', express.static(__dirname + '/../client/dist'));
