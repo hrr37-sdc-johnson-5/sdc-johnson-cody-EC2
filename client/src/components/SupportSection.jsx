@@ -15,7 +15,7 @@ class SupportSection extends React.Component {
 
   componentDidMount() {
     let endpoint = window.location.pathname.slice(8);
-    // let origin = window.location.origin;
+    let origin = window.location.origin;
     let EC2 = 'http://ec2-54-67-59-13.us-west-1.compute.amazonaws.com:3003'
     fetch(`${EC2}/support/${endpoint}`)
     .then(response => {
